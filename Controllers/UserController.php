@@ -23,8 +23,18 @@ class UserController{
         $user->setName($name);
         $user->setEmail($email);
         $user->setPassword($password);
-        $userDAO->Add($user);
-        $this->susSignup();
+        if($userDAO->Add($user)){
+            $this->susSignup(); 
+        }else{
+            header("location:".FRONT_ROOT."Home/Index");
+
+            /*echo'<script type="text/javascript">
+                alert("Email en uso");
+                </script>';*/
+                
+        }
+        
+       
     }
 
 }
