@@ -35,17 +35,17 @@
                 <div class="center-wrap">
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3">Sign Up</h4>
-                    <form action="<?php echo FRONT_ROOT?>User/susSignup" method="post">
+                    <form action="<?php echo FRONT_ROOT?>User/Register" method="post">
                          <div class="form-group">
-                         <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off" >
+                         <input type="text" name="name" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off" >
                          <i class="input-icon uil uil-user"></i>
                          </div>
                          <div class="form-group mt-2">
-                         <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" >
+                         <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" >
                          <i class="input-icon uil uil-at"></i>
                          </div>
                          <div class="form-group mt-2">
-                         <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" >
+                         <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" >
                          <i class="input-icon uil uil-lock-alt"></i>
                          </div>
                          <button class="btn mt-4" type="submit">submit</button>

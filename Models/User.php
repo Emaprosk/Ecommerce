@@ -3,6 +3,7 @@
 
     class User{
         private $id;
+        private $name;
         private $email;
         private $password;
 
@@ -38,6 +39,18 @@
         public function setPassword($password)
         {
                 $this->password = $password;
+
+                return $this;
+        }
+
+        public function getName()
+        {
+                return $this->name;
+        }
+
+        public function setName($name)
+        {
+                $this->name = $name;
 
                 return $this;
         }

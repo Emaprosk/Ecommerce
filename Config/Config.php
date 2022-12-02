@@ -10,7 +10,7 @@ define("JS_PATH", FRONT_ROOT.VIEWS_PATH . "js/");
 
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "db_tpfinal");
+define("DB_NAME", "ecommerce");
 define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_PORT","3308");

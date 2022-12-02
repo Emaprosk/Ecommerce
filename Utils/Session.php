@@ -14,7 +14,6 @@
         }
 
         public static function VerifySession(){
-            //if the user not logged in the page, redirect to login
             if(!isset($_SESSION["loggedUser"])){
                 header("Location: ". FRONT_ROOT . "Home/Index");
             }

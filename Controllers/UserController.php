@@ -1,6 +1,9 @@
 <?php 
 
-namespace Controllers;
+    namespace Controllers;
+
+    use DAO\UserDAO as UserDAO;
+    use Models\User as User;
 
 class UserController{
 
@@ -12,6 +15,16 @@ class UserController{
     }
     public function susSignup(){
         header("location:".FRONT_ROOT."Home/SuscefullSingUp");
+    }
+
+    public function Register($name, $email, $password){
+        $user = new User;
+        $userDAO = new UserDAO; 
+        $user->setName($name);
+        $user->setEmail($email);
+        $user->setPassword($password);
+        $userDAO->Add($user);
+        $this->susSignup();
     }
 
 }
