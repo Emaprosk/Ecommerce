@@ -26,10 +26,12 @@ class UserController{
         if($userDAO->Add($user)){
             $this->susSignup(); 
         }else{
-            echo'<script type="text/javascript">
+            header("location:".FRONT_ROOT."Home/Index");
+
+            /*echo'<script type="text/javascript">
                 alert("Email en uso");
-                </script>';
-                header("location:".FRONT_ROOT."Home/Index");
+                </script>';*/
+                
         }
         
        
