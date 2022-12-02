@@ -22,3 +22,4 @@
      </div>
 </main>
 
+<?php echo "HOLA" ?>
