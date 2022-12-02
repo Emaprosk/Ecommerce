@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+     require_once('nav.php');
+?>
+<main>
+    <h1>hello world</h1>
+</main>
     
 </body>
 </html>

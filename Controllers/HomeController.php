@@ -16,6 +16,9 @@
         {
             require_once(VIEWS_PATH."logout.php");
         }
+        public function SuscefullSingUp(){
+            require_once(VIEWS_PATH."susSignup.php");
+        }
 
     }
 ?>
