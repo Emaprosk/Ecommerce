@@ -12,11 +12,8 @@
 
         public function Add(User $user){
             if($this->searchEmail($user)){
-                echo'<script type="text/javascript">
-                alert("Email en uso");
-                window.location.href="index.php";
-                </script>';
-                header("Location: ". FRONT_ROOT . "Home/Index");
+                
+                return false;
             }
             else{
                 $query = ("INSERT INTO user(name,email, password) 
@@ -29,6 +26,8 @@
                 $this->connection = Connection::GetInstance();
 
                 $this->connection->Execute($query, $parameters, QueryType::Query);
+
+                return true;
             }
         }
 
