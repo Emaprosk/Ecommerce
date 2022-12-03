@@ -1,9 +1,11 @@
 
 <?php
 
-use DAO\ArticuloDAO;
+    use DAO\ArticuloDAO as ArticuloDAO;
+    use Utils\Session;
 
-     require_once('nav.php');
+    Session::VerifySession();
+    require_once('nav.php');
 ?>
 <main>
     <div class="mx-auto" style="width: 40%;">
