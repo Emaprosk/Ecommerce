@@ -18,11 +18,11 @@
                     <h4 class="mb-4 pb-3">Log In</h4>
                     <form action="<?php echo FRONT_ROOT?>User/Login" method="post">
                          <div class="form-group">
-                         <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
+                         <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
                          <i class="input-icon uil uil-at"></i>
                          </div>
                          <div class="form-group mt-2">
-                         <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
+                         <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
                          <i class="input-icon uil uil-lock-alt"></i>
                          </div>
                          <button class="btn mt-4" type="submit">submit</button>

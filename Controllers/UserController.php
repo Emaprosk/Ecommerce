@@ -4,13 +4,22 @@
 
     use DAO\UserDAO as UserDAO;
     use Models\User as User;
+use Utils\Session;
 
 class UserController{
 
 
-    public function Login($logemail, $logpass){
-        if($logemail == "admin@admin.com" && $logpass == "admin"){
+    public function Login($email, $password){
+        $user = new User;
+        $userDAO = new UserDAO; 
+        $user->setEmail($email);
+        $user->setPassword($password);
+        if($userDAO->searchUser($user)){
+            Session::CreateSession($user);
             header("location:".FRONT_ROOT."Home/Home");
+        }
+        else{
+            header("location:".FRONT_ROOT."Home/Index");
         }
     }
     public function susSignup(){

@@ -18,7 +18,7 @@
       </ul>
       <ul class="navbar-nav d-flex">
         <li class="nav-item">
-          <a class="nav-link" href="">Cerrar Sesion</a>
+          <a class="nav-link" href="<?php echo FRONT_ROOT ?>Home/Logout">Cerrar Sesion</a>
         </li>
       </ul>
     </div>
