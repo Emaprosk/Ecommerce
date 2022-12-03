@@ -1,17 +1,15 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
 <?php
      require_once('nav.php');
 ?>
-<main>
+<main class="mx-auto" style="width: 50%;">
     <h1>hello world</h1>
+
+    <form action="<?php echo FRONT_ROOT?>Articulo/CrearArticulo" method="post">
+        <input type="text" name="titulo" id="titulo" placeholder="Titulo">
+        <input type="text" name="desciption" id="description" placeholder="Descripcion">
+        <button type="submit" class="btn">Crear Articulo</button>
+    </form>
+
+
 </main>
-    
-</body>
-</html>
