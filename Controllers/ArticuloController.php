@@ -14,9 +14,8 @@
             $newArticulo ->setTitle($titulo);
             $newArticulo->setDescription($description);
 
-            $artDAO->createArticle($newArticulo);
-            $artDAO->ShowListArticles();
-
+            $artDAO->Add($newArticulo);
+            header("location:".FRONT_ROOT."Home/Home");
         }
 
     }
