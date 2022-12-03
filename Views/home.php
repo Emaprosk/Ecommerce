@@ -12,6 +12,7 @@ use DAO\ArticuloDAO;
         <form action="<?php echo FRONT_ROOT?>Articulo/CrearArticulo" method="post">
             <input type="text" name="titulo" id="titulo" placeholder="Titulo">
             <input type="text" name="desciption" id="description" placeholder="Descripcion">
+            <input type="file" name="upload-img" id="upload-img">
             <button type="submit" class="btn">Crear Articulo</button>
         </form>
     </div>
