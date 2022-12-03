@@ -1,3 +1,4 @@
+-- Active: 1666390361329@@localhost@3305
 create database ecommerce;
 
 create table user(
