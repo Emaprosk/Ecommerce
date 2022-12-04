@@ -1,4 +1,3 @@
-
 <?php
 
     use DAO\ArticuloDAO as ArticuloDAO;
@@ -11,13 +10,12 @@
     <div class="mx-auto" style="width: 40%;">
         <h1 class="mt-5">Agregar articulo</h1>
 
-        <form action="<?php echo FRONT_ROOT?>Articulo/Add" method="post">
+        <form action="<?php echo FRONT_ROOT?>Articulo/CrearArticulo" method="post">
             <input type="text" name="titulo" id="titulo" placeholder="Titulo">
-            <input type="text" name="description" id="description" placeholder="Descripcion">
-            <input type="image" name="image" id="image" placeholder="Image">
+            <input type="text" name="desciption" id="description" placeholder="Descripcion">
+            <input type="file" name="upload-img" id="upload-img">
             <button type="submit" class="btn">Crear Articulo</button>
         </form>
-        
     </div>
     <div class="mx-auto" style="width: 73%;">
     <h1 class="mt-5">Articulos</h1>
