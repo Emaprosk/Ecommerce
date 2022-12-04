@@ -11,7 +11,8 @@ create table user(
 
 create table articulo(
 	title varchar(20),
-    description varchar(50)
+    description varchar(50),
+    image longblob
 );
 
 select * from user;
