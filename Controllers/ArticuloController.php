@@ -7,7 +7,7 @@
 
     class ArticuloController
     {
-        public function CrearArticulo($titulo,$description){
+        public function Add($titulo,$description){
             $artDAO = new ArticuloDAO;
             $newArticulo = new Articulo;
 
