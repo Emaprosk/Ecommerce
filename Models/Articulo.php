@@ -4,6 +4,7 @@ namespace Models;
 class Articulo{
     private $title;
     private $description;
+    private $image;
     
     public function getTitle()
     {
@@ -22,6 +23,18 @@ class Articulo{
     public function setDescription($description)
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
 
         return $this;
     }

@@ -10,10 +10,10 @@
     <div class="mx-auto" style="width: 40%;">
         <h1 class="mt-5">Agregar articulo</h1>
 
-        <form action="<?php echo FRONT_ROOT?>Articulo/CrearArticulo" method="post">
-            <input type="text" name="titulo" id="titulo" placeholder="Titulo">
-            <input type="text" name="desciption" id="description" placeholder="Descripcion">
-            <input type="file" name="upload-img" id="upload-img">
+        <form action="<?php echo FRONT_ROOT?>Articulo/Add" method="post" enctype="multipart/form-data">
+            <input type="text" name="titulo" id="titulo" placeholder="Titulo" required >
+            <input type="text" name="desciption" id="description" placeholder="Descripcion" required >
+            <input type="file" name="image" id="image"  required>
             <button type="submit" class="btn">Crear Articulo</button>
         </form>
     </div>
@@ -33,6 +33,7 @@
                     <div class="card-body color">
                         <h5 class="card-title"><?php echo $arti->getTitle()?></h5>
                         <p class="card-text"><?php echo $arti->getDescription()?></p>
+                        <img class="card-text"><?php echo $arti->getImage()?></img>
                     </div>
                 </div>
                 <?php
