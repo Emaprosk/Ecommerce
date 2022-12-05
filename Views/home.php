@@ -33,7 +33,8 @@
                     <div class="card-body color">
                         <h5 class="card-title"><?php echo $arti->getTitle()?></h5>
                         <p class="card-text"><?php echo $arti->getDescription()?></p>
-                        <img class="card-text"><?php echo $arti->getImage()?></img>
+                        <p class="card-text"><?php echo base64_encode($arti->getImage())?></p>
+                        <img src="data:image/jpg;base64,<?php echo $arti->getImage()?>"  alt="">
                     </div>
                 </div>
                 <?php

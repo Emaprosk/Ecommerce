@@ -2,7 +2,7 @@
     namespace DAO;
 
     use Models\Articulo as Articulo;
-use mysqli;
+use PDO;
 
     class ArticuloDAO{
         private $connection;
@@ -36,18 +36,34 @@ use mysqli;
                 $newArti = new Articulo;
                 $newArti->setTitle($row["title"]);
                 $newArti->setDescription($row["description"]);
-                $newArti->setImage($row["image"]);
                 
                 //header("Content-type: image/jpg"); 
-
-                /*$imgData = $row["image"]->fetch_assoc();
-                echo $imgData["image"];*/
-
+                
+                //$imgData = $row->fetch_assoc();
+                /*echo $imgData["image"];*/
+                $newArti->setImage($row["image"]);
+                
                 array_push($artList, $newArti);
             }
 
             return $artList;
+        }
+
+        private function getImageById($id){
+            $imgData = null;
+
+            $query = ("SELECT image FROM articulo WHERE idArticulo = $id");
             
+            $this->connection = Connection::GetInstance();
+
+            $result = $this->connection->Execute($query);
+            
+            while($row = $result->fetch_assoc())
+            {
+                $imgData = $row["image"];
+            }
+
+            return $imgData;
         }
         
 

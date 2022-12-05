@@ -10,6 +10,7 @@ create table user(
 );
 
 create table articulo(
+    idArticulo int auto_increment,
 	title varchar(20),
     description varchar(50),
     image longblob
